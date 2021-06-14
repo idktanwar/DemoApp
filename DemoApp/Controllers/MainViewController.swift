@@ -15,18 +15,21 @@ class MainViewController: UIViewController, MenuControllDelegate {
     private let blogVC = BlogsViewController()
     private let aboutVC = AboutUsViewController()
     
+    @IBOutlet weak var tblView: UITableView!
+    private var viewModel = ArticlesViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let menu = MenuController(with: ["Blogs", "About Us"])
         menu.delegate  = self
-        
+
         sidemenu = SideMenuNavigationController(rootViewController: menu)
         sidemenu?.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sidemenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         setupUI()
         checkIfUserIsLoggedIn()
-    
+        fetchArticleData()
     }
     
     func setupUI() {
@@ -38,15 +41,19 @@ class MainViewController: UIViewController, MenuControllDelegate {
         self.navigationItem.leftBarButtonItem = barButton
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         
-        title = "Home"
+        title = "Blogs"
         view.backgroundColor = .white
+
+        tblView?.delegate = self
+        tblView?.estimatedRowHeight = 44
+        tblView?.rowHeight = UITableView.automaticDimension
+        tblView?.separatorColor = .clear
     }
     
     @objc func handleLogout() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
-            
             do {
                 try Auth.auth().signOut()
                 let loginVC = LoginViewController()
@@ -102,6 +109,13 @@ class MainViewController: UIViewController, MenuControllDelegate {
         }
     }
     
+    func fetchArticleData() {
+        viewModel.fetchArticleData { [weak self] in
+            self?.tblView?.dataSource = self
+            self?.tblView?.reloadData()
+        }
+    }
+    
     @IBAction func didTappedMenuButton(_ sender: Any) {
         present(sidemenu!, animated: true)
     }
@@ -112,12 +126,10 @@ class MainViewController: UIViewController, MenuControllDelegate {
         
         sidemenu?.dismiss(animated: true, completion: { [weak self] in
             if name == "Blogs" {
-                self?.view.backgroundColor = .green
                 self?.aboutVC.view.isHidden = true
                 self?.blogVC.view.isHidden = false
             }
             else if name == "About Us" {
-                self?.view.backgroundColor = .red
                 self?.blogVC.view.isHidden = true
                 self?.aboutVC.view.isHidden = false
             }
@@ -126,3 +138,22 @@ class MainViewController: UIViewController, MenuControllDelegate {
     
 }
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource{
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection(section: section)
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "blogcell", for: indexPath) as! BlogListCell
+        let article = viewModel.cellForRowAt(indexPath: indexPath)
+        cell.lblTitle.text = article.title
+        cell.lblDetails.text = article.articleDescription
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+}

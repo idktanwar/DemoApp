@@ -76,7 +76,10 @@ class ArticlesViewModel {
     }
     
     func cellForRowAt (indexPath: IndexPath) -> Article {
-        return newArticles[indexPath.row]
+        if newArticles.count != 0 {
+            return newArticles[indexPath.row]
+        }
+        return Article(author: "NA", title: "NA", articleDescription: "NA", url: "NA", urlToImage: "NA", publishedAt: "NA", content: "NA")
     }
 }
 

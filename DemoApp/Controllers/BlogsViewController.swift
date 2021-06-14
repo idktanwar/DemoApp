@@ -13,14 +13,13 @@ class BlogsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     private var viewModel = ArticlesViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         setupUI()
     }
     
     func setupUI() {
         tblView?.delegate = self
         tblView?.tableFooterView = UIView(frame: .zero)
-        
+
         viewModel.fetchArticleData { [weak self] in
             self?.tblView?.dataSource = self
             //just to move focus to 1st row after for next page

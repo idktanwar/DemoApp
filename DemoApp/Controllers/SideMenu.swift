@@ -35,6 +35,7 @@ class MenuController: UITableViewController {
         tableView.backgroundColor = darkColor
         view.backgroundColor = darkColor
     }
+    
     //TableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         menuitems.count
