@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "97F9FB02-56BD-413B-884D-C85051B1D0C6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C397E555-BC5D-453D-9A50-A12B6762EB41"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/Services/Webservice.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B39AD5C1-0146-4D56-BE92-EB416E9B5E8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/Services/Webservice.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getArticle(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F209371-9052-4F16-B97A-C6CCDA741551"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/ViewModel/ArticleViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchArticleData(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F209371-9052-4F16-B97A-C6CCDA741551 - 39b40ccf0fcf7919"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DemoApp.ArticleData, Swift.Error&gt;) -&gt; () in DemoApp.ArticlesViewModel.fetchArticleData(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "DemoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dineshtanwar/Documents/Dinesh/Assignment/RelifeMedicare/DemoApp%20copy%202/DemoApp/ViewModel/ArticleViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "241">
+               </Location>
+               <Location
+                  uuid = "2F209371-9052-4F16-B97A-C6CCDA741551 - 39b40ccf0fcf7919"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DemoApp.ArticleData, Swift.Error&gt;) -&gt; () in DemoApp.ArticlesViewModel.fetchArticleData(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "DemoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dineshtanwar/Documents/Dinesh/Assignment/RelifeMedicare/DemoApp%20copy%202/DemoApp/ViewModel/ArticleViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "270">
+               </Location>
+               <Location
+                  uuid = "2F209371-9052-4F16-B97A-C6CCDA741551 - 39b40ccf0fcf7919"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DemoApp.ArticleData, Swift.Error&gt;) -&gt; () in DemoApp.ArticlesViewModel.fetchArticleData(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "DemoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dineshtanwar/Documents/Dinesh/Assignment/RelifeMedicare/DemoApp%20copy%202/DemoApp/ViewModel/ArticleViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "690">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "119B19CC-7B40-496D-BD35-B0E5E58FBDB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/Controllers/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45985F59-D232-41F3-8A09-EBDE1C8CFA36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/Controllers/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "ValidationCode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53164D03-C2E6-4531-9341-7496DB1A148E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoApp/Controllers/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "ValidationCode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
