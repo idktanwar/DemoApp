@@ -11,6 +11,7 @@ class WebService {
     
     private var dataTask: URLSessionDataTask?
 
+    //Get GetArticle Data
     func getArticle(completion: @escaping (Result<ArticleData, Error>) -> Void) {
         
         let newsurl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=cb9ff8ee7a6548ab95003348d2146318"
@@ -43,7 +44,7 @@ class WebService {
         dataTask?.resume()
     }
     
-    
+    //Get image from URL
     func getImageDataFrom(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in

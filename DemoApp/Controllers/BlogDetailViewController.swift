@@ -9,6 +9,8 @@ import UIKit
 
 class BlogDetailViewController: UIViewController {
 
+    //MARK:- Properties
+    
     @IBOutlet weak var imgArticle: UIImageView!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
@@ -16,10 +18,14 @@ class BlogDetailViewController: UIViewController {
     
     var selectedItem: Article?
     
+    //MARK:- Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+    
+    //MARK:-  Helper methods
     
     func setupUI() {
         self.title = "Blog Details"

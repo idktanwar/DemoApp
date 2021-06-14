@@ -15,7 +15,5 @@ class AboutUsViewController: UIViewController {
     }
     
     func setupUI() {
-        
     }
-    
 }

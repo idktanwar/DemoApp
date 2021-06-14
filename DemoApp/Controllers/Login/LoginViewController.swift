@@ -10,9 +10,11 @@ import Firebase
 
 class LoginViewController: UITableViewController {
 
+    //MARK:- Properties
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    //MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,6 +25,7 @@ class LoginViewController: UITableViewController {
     }
     
     
+    //MARK:- Selector
     @IBAction func btnLoginClicked(_ sender: UIButton) {
         ValidationCode()
     }
@@ -35,6 +38,7 @@ class LoginViewController: UITableViewController {
     
 }
 
+//MARK:-  TableView
 extension LoginViewController{
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height
@@ -52,6 +56,7 @@ extension LoginViewController{
     }
 }
 
+//MARK:- Helper
 extension LoginViewController{
     fileprivate func ValidationCode() {
         if let email = txtEmail.text, let password = txtPassword.text{

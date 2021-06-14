@@ -14,6 +14,8 @@ protocol MenuControllDelegate {
 
 class MenuController: UITableViewController {
     
+    //MARK:- Properties
+    
     var delegate: MenuControllDelegate?
     private let menuitems: [String]
     private let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
@@ -30,13 +32,15 @@ class MenuController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK:- Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = darkColor
         view.backgroundColor = darkColor
     }
     
-    //TableView
+    //MARK:- Tableview Delegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         menuitems.count
     }

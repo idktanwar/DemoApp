@@ -25,7 +25,6 @@
 		98E22653267655AD00CD0D8E /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E22652267655AD00CD0D8E /* ArticleViewModel.swift */; };
 		98E22658267655EC00CD0D8E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E22657267655EC00CD0D8E /* Article.swift */; };
 		98E2265D2676562C00CD0D8E /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2265C2676562C00CD0D8E /* Webservice.swift */; };
-		98E2267526767ABE00CD0D8E /* NewBlogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2267426767ABE00CD0D8E /* NewBlogsViewController.swift */; };
 		98E942412675E56600415B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E942402675E56600415B3F /* AppDelegate.swift */; };
 		98E942432675E56600415B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E942422675E56600415B3F /* SceneDelegate.swift */; };
 		98E942482675E56600415B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E942462675E56600415B3F /* Main.storyboard */; };
@@ -52,7 +51,6 @@
 		98E22652267655AD00CD0D8E /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		98E22657267655EC00CD0D8E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		98E2265C2676562C00CD0D8E /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		98E2267426767ABE00CD0D8E /* NewBlogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBlogsViewController.swift; sourceTree = "<group>"; };
 		98E9423D2675E56600415B3F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E942402675E56600415B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98E942422675E56600415B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				98BC4D6426763E4C00DF296B /* BlogsViewController.swift */,
 				98BC4D6726763E6C00DF296B /* AboutUsViewController.swift */,
 				98BC4D6A26764A8A00DF296B /* BlogDetailViewController.swift */,
-				98E2267426767ABE00CD0D8E /* NewBlogsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				98B41FB22675F7720073F5E0 /* SignUpViewController.swift in Sources */,
 				98BC4D6226763DCD00DF296B /* SideMenu.swift in Sources */,
 				98E22658267655EC00CD0D8E /* Article.swift in Sources */,
-				98E2267526767ABE00CD0D8E /* NewBlogsViewController.swift in Sources */,
 				98B41FF4267605820073F5E0 /* MainViewController.swift in Sources */,
 				98607AD92676089800B5FFA4 /* String+Constant.swift in Sources */,
 				98BC4D6B26764A8A00DF296B /* BlogDetailViewController.swift in Sources */,

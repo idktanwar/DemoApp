@@ -11,13 +11,16 @@ import SideMenu
 
 class MainViewController: UIViewController, MenuControllDelegate {
     
-    private var sidemenu: SideMenuNavigationController?
-    private let blogVC = BlogsViewController()
-    private let aboutVC = AboutUsViewController()
+    //MARK:- Properties
     
+    private var sidemenu: SideMenuNavigationController?
+    let blogVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BlogsViewController")
+    let aboutVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AboutUsViewController")
     @IBOutlet weak var tblView: UITableView!
     private var viewModel = ArticlesViewModel()
 
+    //MARK:- LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let menu = MenuController(with: ["Blogs", "About Us"])
@@ -32,6 +35,7 @@ class MainViewController: UIViewController, MenuControllDelegate {
         fetchArticleData()
     }
     
+    //MARK:- Helper Methods
     func setupUI() {
         let button =  UIButton(type: .custom)
         button.setImage(UIImage(systemName: "line.horizontal.3"), for:.normal)
@@ -48,29 +52,6 @@ class MainViewController: UIViewController, MenuControllDelegate {
         tblView?.estimatedRowHeight = 44
         tblView?.rowHeight = UITableView.automaticDimension
         tblView?.separatorColor = .clear
-    }
-    
-    @objc func handleLogout() {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
-            do {
-                try Auth.auth().signOut()
-                let loginVC = LoginViewController()
-                let navController = UINavigationController(rootViewController: loginVC)
-                
-                // UPDATE: - iOS 13 presentation fix
-                navController.modalPresentationStyle = .fullScreen
-                
-                self.present(navController, animated: true, completion: nil)
-            } catch {
-                print("Failed to sign out")
-            }
-        }))
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        present(alertController, animated: true, completion: nil)
     }
     
     func addChildViewController() {
@@ -116,6 +97,31 @@ class MainViewController: UIViewController, MenuControllDelegate {
         }
     }
     
+    //MARK: Selectors
+    
+    @objc func handleLogout() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
+            do {
+                try Auth.auth().signOut()
+                let loginVC = LoginViewController()
+                let navController = UINavigationController(rootViewController: loginVC)
+                
+                // UPDATE: - iOS 13 presentation fix
+                navController.modalPresentationStyle = .fullScreen
+                
+                self.present(navController, animated: true, completion: nil)
+            } catch {
+                print("Failed to sign out")
+            }
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func didTappedMenuButton(_ sender: Any) {
         present(sidemenu!, animated: true)
     }
@@ -138,6 +144,8 @@ class MainViewController: UIViewController, MenuControllDelegate {
     
 }
 
+//MARK:- TableView Delegate
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -149,6 +157,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         let article = viewModel.cellForRowAt(indexPath: indexPath)
         cell.lblTitle.text = article.title
         cell.lblDetails.text = article.articleDescription
+        
         return cell
     }
 

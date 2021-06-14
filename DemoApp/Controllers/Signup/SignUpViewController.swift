@@ -11,12 +11,16 @@ import Firebase
 
 class SignUpViewController: UITableViewController {
     
+    //MARK:- Properties
+    
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConPassword: UITextField!
     @IBOutlet weak var txtPhoneNo: UITextField!
+    
+    //MARK:- LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,19 @@ class SignUpViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let tableViewHeight = self.tableView.frame.height
+        let contentHeight = self.tableView.contentSize.height
+        
+        let centeringInset = (tableViewHeight - contentHeight) / 2.0
+        let topInset = max(centeringInset, 0.0)
+        
+        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    //MARK:- Selectors
     
     @objc
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
@@ -132,18 +149,9 @@ class SignUpViewController: UITableViewController {
     @IBAction func btnLoginClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        let tableViewHeight = self.tableView.frame.height
-        let contentHeight = self.tableView.contentSize.height
-        
-        let centeringInset = (tableViewHeight - contentHeight) / 2.0
-        let topInset = max(centeringInset, 0.0)
-        
-        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
-    }
 }
+
+//MARK:- ImagePickerController
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     

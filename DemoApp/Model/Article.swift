@@ -7,6 +7,8 @@
 
 import Foundation
 
+//Used NEWSAPI Services to gee the news data
+
 // MARK: - Welcome
 struct ArticleData: Codable {
     let status: String
@@ -16,7 +18,6 @@ struct ArticleData: Codable {
 
 // MARK: - Article
 struct Article: Codable {
-//    let source: Source
     let author: String?
     let title: String
     let articleDescription: String?
