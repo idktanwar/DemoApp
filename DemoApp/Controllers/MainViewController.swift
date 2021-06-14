@@ -145,7 +145,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "blogcell", for: indexPath) as! BlogListCell
         let article = viewModel.cellForRowAt(indexPath: indexPath)
         cell.lblTitle.text = article.title
@@ -155,5 +154,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = viewModel.cellForRowAt(indexPath: indexPath)
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "BlogDetailViewController") as! BlogDetailViewController
+        viewController.selectedItem = article
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

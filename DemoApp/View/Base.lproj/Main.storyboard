@@ -380,7 +380,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPv-76-Gi9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPv-76-Gi9">
                                                     <rect key="frame" x="10" y="10" width="394" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -433,6 +433,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNH-Jq-bpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4561" y="70"/>
+        </scene>
+        <!--Blog Detail View Controller-->
+        <scene sceneID="xgl-hS-y8v">
+            <objects>
+                <viewController storyboardIdentifier="BlogDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aQq-I6-So7" customClass="BlogDetailViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTh-pL-QYE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MwF-Ny-x98">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="SWu-VB-Cb0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qu-5H-1ih">
+                                <rect key="frame" x="20" y="459.5" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17t-nX-sTX">
+                                <rect key="frame" x="20" y="364" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-Mm-bDd">
+                                <rect key="frame" x="20" y="412" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6a4-RF-bou"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6a4-RF-bou" firstAttribute="trailing" secondItem="0Qu-5H-1ih" secondAttribute="trailing" constant="20" id="0js-1Q-ymW"/>
+                            <constraint firstItem="6a4-RF-bou" firstAttribute="trailing" secondItem="SFP-Mm-bDd" secondAttribute="trailing" constant="20" id="3Ci-gL-xqd"/>
+                            <constraint firstItem="SFP-Mm-bDd" firstAttribute="leading" secondItem="6a4-RF-bou" secondAttribute="leading" constant="20" id="5l3-WY-RHy"/>
+                            <constraint firstItem="6a4-RF-bou" firstAttribute="trailing" secondItem="17t-nX-sTX" secondAttribute="trailing" constant="20" id="AZX-s0-Bgv"/>
+                            <constraint firstItem="SFP-Mm-bDd" firstAttribute="top" secondItem="17t-nX-sTX" secondAttribute="bottom" constant="20" id="IV8-pm-c3s"/>
+                            <constraint firstItem="17t-nX-sTX" firstAttribute="top" secondItem="MwF-Ny-x98" secondAttribute="bottom" constant="20" id="Lsc-XT-PYj"/>
+                            <constraint firstItem="MwF-Ny-x98" firstAttribute="top" secondItem="6a4-RF-bou" secondAttribute="top" id="NC4-bH-oBW"/>
+                            <constraint firstItem="17t-nX-sTX" firstAttribute="leading" secondItem="6a4-RF-bou" secondAttribute="leading" constant="20" id="Q4M-40-H2p"/>
+                            <constraint firstItem="0Qu-5H-1ih" firstAttribute="top" secondItem="SFP-Mm-bDd" secondAttribute="bottom" constant="20" id="Zdk-kb-waV"/>
+                            <constraint firstItem="MwF-Ny-x98" firstAttribute="leading" secondItem="6a4-RF-bou" secondAttribute="leading" id="bco-T8-VSZ"/>
+                            <constraint firstItem="0Qu-5H-1ih" firstAttribute="leading" secondItem="6a4-RF-bou" secondAttribute="leading" constant="20" id="dp7-fo-CJN"/>
+                            <constraint firstItem="6a4-RF-bou" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0Qu-5H-1ih" secondAttribute="bottom" constant="20" id="gqk-cf-17c"/>
+                            <constraint firstItem="MwF-Ny-x98" firstAttribute="trailing" secondItem="6a4-RF-bou" secondAttribute="trailing" id="ngu-4D-1xV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgArticle" destination="MwF-Ny-x98" id="cb7-6H-vwc"/>
+                        <outlet property="lblDate" destination="17t-nX-sTX" id="28f-7R-625"/>
+                        <outlet property="lblDesc" destination="0Qu-5H-1ih" id="ssm-2k-Pyp"/>
+                        <outlet property="lblTitle" destination="SFP-Mm-bDd" id="ElN-LS-6uk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUY-tU-6K5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5317.3913043478269" y="62.946428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QNy-5o-ICe">

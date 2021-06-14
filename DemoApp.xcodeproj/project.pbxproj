@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B0A94A295AB5A21FAC987F8 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1571A0486599A792966967 /* Pods_DemoApp.framework */; };
 		98607AD92676089800B5FFA4 /* String+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98607AD82676089800B5FFA4 /* String+Constant.swift */; };
+		9892C1DA26777E550035F0BB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9892C1D926777E550035F0BB /* Helper.swift */; };
 		98B41F982675F5DB0073F5E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98B41F972675F5DB0073F5E0 /* GoogleService-Info.plist */; };
 		98B41FAF2675F7390073F5E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B41FAE2675F7390073F5E0 /* LoginViewController.swift */; };
 		98B41FB22675F7720073F5E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B41FB12675F7720073F5E0 /* SignUpViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		1A1571A0486599A792966967 /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98607AD82676089800B5FFA4 /* String+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constant.swift"; sourceTree = "<group>"; };
+		9892C1D926777E550035F0BB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		98B41F972675F5DB0073F5E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98B41FAE2675F7390073F5E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		98B41FB12675F7720073F5E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		9892C1D826777E420035F0BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98607ADB267608A200B5FFA4 /* Constant */,
+				98B41FB52675FD040073F5E0 /* Extension */,
+				9892C1D926777E550035F0BB /* Helper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		98B41FB52675FD040073F5E0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,12 +221,11 @@
 				98607B1A26761A4E00B5FFA4 /* View */,
 				988BCDA126763BCE008BEDC1 /* Controllers */,
 				98E2264D2676529100CD0D8E /* Cells */,
-				98607ADB267608A200B5FFA4 /* Constant */,
 				98607B1926761A3800B5FFA4 /* Resources */,
-				98B41FB52675FD040073F5E0 /* Extension */,
 				98E2265B2676561600CD0D8E /* Services */,
 				98E22656267655D900CD0D8E /* Model */,
 				98E226512676558E00CD0D8E /* ViewModel */,
+				9892C1D826777E420035F0BB /* Utils */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -350,6 +361,7 @@
 				98B41FBD2675FDA60073F5E0 /* UIViewController + Extension.swift in Sources */,
 				98BC4D6826763E6C00DF296B /* AboutUsViewController.swift in Sources */,
 				98B41FB72675FD180073F5E0 /* String + Extension.swift in Sources */,
+				9892C1DA26777E550035F0BB /* Helper.swift in Sources */,
 				98BC4D6526763E4C00DF296B /* BlogsViewController.swift in Sources */,
 				98E942432675E56600415B3F /* SceneDelegate.swift in Sources */,
 				98B41FB22675F7720073F5E0 /* SignUpViewController.swift in Sources */,

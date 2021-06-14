@@ -20,4 +20,6 @@ target 'DemoApp' do
   #SideMenu
   pod "SideMenu"
 
+  #Image Caching
+  pod "SDWebImage"
 end
