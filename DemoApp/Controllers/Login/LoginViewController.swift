@@ -76,6 +76,7 @@ extension LoginViewController{
                     let password = txtPassword.text else { return }
                 
                 // sign user in with email and password
+
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     
                     // handle error
@@ -84,7 +85,13 @@ extension LoginViewController{
                         return
                     }
                     
-                    guard let mainTabVC = UIApplication.shared.keyWindow?.rootViewController as? MainViewController else { return }
+                    guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
+                        return
+                    }
+                    
+                    let navigationController = UINavigationController(rootViewController: rootVC)
+                    UIApplication.shared.windows.first?.rootViewController = navigationController
+                    UIApplication.shared.windows.first?.makeKeyAndVisible()
                     
                     self.dismiss(animated: true, completion: nil)
                 }

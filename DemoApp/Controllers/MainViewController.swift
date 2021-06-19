@@ -97,7 +97,7 @@ class MainViewController: UIViewController, MenuControllDelegate {
         }
     }
     
-    //MARK: Selectors
+    //MARK:- Selectors
     
     @objc func handleLogout() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -105,12 +105,9 @@ class MainViewController: UIViewController, MenuControllDelegate {
         alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
             do {
                 try Auth.auth().signOut()
-                let loginVC = LoginViewController()
-                let navController = UINavigationController(rootViewController: loginVC)
-                
-                // UPDATE: - iOS 13 presentation fix
+                let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController")
+                let navController = UINavigationController(rootViewController: rootController)                
                 navController.modalPresentationStyle = .fullScreen
-                
                 self.present(navController, animated: true, completion: nil)
             } catch {
                 print("Failed to sign out")
@@ -118,7 +115,6 @@ class MainViewController: UIViewController, MenuControllDelegate {
         }))
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
         present(alertController, animated: true, completion: nil)
     }
     

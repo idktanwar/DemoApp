@@ -99,9 +99,7 @@ class SignUpViewController: UITableViewController {
                                 // handle error
                                 if let error = error {
                                     print("Failed to upload image to Firebase Storage with error", error.localizedDescription)
-//                                    self.openAlert(title: "Error", message: error.localizedDescription, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-//                                        print("Okay clicked!")
-//                                    }])
+                                    
                                     return
                                 }
                                 
@@ -124,13 +122,13 @@ class SignUpViewController: UITableViewController {
 
                                     // save user info to database
                                     USER_REF.updateChildValues(values, withCompletionBlock: { (error, ref) in
-
-                                        guard let mainVC = UIApplication.shared.keyWindow?.rootViewController as? MainViewController else { return }
-
-                                        // configure view controllers in maintabvc
-    
                                         // dismiss login controller
-                                        self.dismiss(animated: true, completion: nil)
+                                        
+                                        self.openAlert(title: "Thank You", message: "You have successfully register, please do login!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{
+                                            _ in
+                                            self.navigationController?.popViewController(animated: true)
+                                        }])
+                                        
                                     })
                                 })
                             })
