@@ -112,10 +112,8 @@ class SignUpViewController: UITableViewController {
 
                                     // user id
                                     guard let uid = authResult?.user.uid else { return }
-                                    guard let fcmToken = Messaging.messaging().fcmToken else { return }
 
-                                    let dictionaryValues = ["fcmToken": fcmToken,
-                                                            "username": username,
+                                    let dictionaryValues = ["username": username,
                                                             "profileImageUrl": profileImageUrl]
 
                                     let values = [uid: dictionaryValues]

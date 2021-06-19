@@ -11,7 +11,6 @@ target 'DemoApp' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
   
   #Keyboard helper
