@@ -112,7 +112,7 @@ class SignUpViewController: UITableViewController {
 
                                     // user id
                                     guard let uid = authResult?.user.uid else { return }
-
+                                    
                                     let dictionaryValues = ["username": username,
                                                             "profileImageUrl": profileImageUrl]
 

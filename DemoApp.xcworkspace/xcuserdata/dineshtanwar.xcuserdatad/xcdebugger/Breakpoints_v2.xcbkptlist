@@ -46,8 +46,8 @@
             filePath = "DemoApp/Controllers/Signup/SignUpViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "btnSignupClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
