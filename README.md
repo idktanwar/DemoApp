@@ -27,19 +27,23 @@ App UI
 
 1- LoginScreen
 
-![](DemoApp_Test/Resources/Screenshoots/login.png)
+![](DemoApp/Resources/Screenshoots/login.png)
 
 2- SignUp Screen
 
-![](DemoApp_Test/Resources/Screenshoots/signup.png)
+![](DemoApp/Resources/Screenshoots/signup.png)
 
 3- MainScreen
 
-![](DemoApp_Test/Resources/Screenshoots/blogs.png)
+![](DemoApp/Resources/Screenshoots/blogs.png)
+
+3- Details
+
+![](DemoApp/Resources/Screenshoots/details.png)
 
 3- AboutUs
 
-![](DemoApp_Test/Resources/Screenshoots/aboutus.png)
+![](DemoApp/Resources/Screenshoots/aboutus.png)
 
 
 ## Author
